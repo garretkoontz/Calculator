@@ -143,7 +143,7 @@ class SplitViewController: UIViewController {
         
         let pulse = PulsingAnimation(numberOfPulses: 1, radius: 80, position: clearButton.center)
         pulse.animationDuration = 0.5
-        pulse.backgroundColor = getRandomColor().cgColor
+        pulse.backgroundColor = HelperFunction.getRandomColor().cgColor
         
         self.view.layer.insertSublayer(pulse, below: clearButton.layer)
     }
@@ -152,22 +152,11 @@ class SplitViewController: UIViewController {
         
         let pulse = PulsingAnimation(numberOfPulses: 1, radius: 100, position: calculateButton.center)
         pulse.animationDuration = 0.5
-        pulse.backgroundColor = getRandomColor().cgColor
+        pulse.backgroundColor = HelperFunction.getRandomColor().cgColor
         
         self.view.layer.insertSublayer(pulse, below: calculateButton.layer)
         
     }
-    
-    
-    func getRandomColor() -> UIColor {
-        
-        let randomRed:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
-        let randomGreen:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
-        let randomBlue:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
-        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-    }
-
-    
     // Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

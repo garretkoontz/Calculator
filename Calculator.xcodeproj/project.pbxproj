@@ -14,6 +14,7 @@
 		AC28FB0D1E26F06D007A3137 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC28FB0C1E26F06D007A3137 /* Launch Screen.storyboard */; };
 		AC297CF01E27F3FE00504528 /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC297CEF1E27F3FE00504528 /* DismissAnimator.swift */; };
 		AC297CF21E27F40800504528 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC297CF11E27F40800504528 /* Interactor.swift */; };
+		AC2C03461E29815D0045D63C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C03451E29815D0045D63C /* Helper.swift */; };
 		AC7080781E27582900BBA6FF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7080771E27582900BBA6FF /* InfoViewController.swift */; };
 		ACD0C4871E25820C0016D177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD0C4861E25820C0016D177 /* Assets.xcassets */; };
 		ACD0C4891E258D870016D177 /* moneysound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD0C4881E258D870016D177 /* moneysound.mp3 */; };
@@ -32,6 +33,7 @@
 		AC28FB0C1E26F06D007A3137 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		AC297CEF1E27F3FE00504528 /* DismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
 		AC297CF11E27F40800504528 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		AC2C03451E29815D0045D63C /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		AC7080771E27582900BBA6FF /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		ACD0C4861E25820C0016D177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACD0C4881E258D870016D177 /* moneysound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = moneysound.mp3; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				AC18C8BC1E2416EF00A43458 /* AppDelegate.swift */,
 				AC18C8C01E2416EF00A43458 /* Main.storyboard */,
+				AC2C03451E29815D0045D63C /* Helper.swift */,
 				AC28FB0E1E26F882007A3137 /* View Controllers */,
 				AC28FB101E26F8C5007A3137 /* Resources */,
 				AC28FB0F1E26F89A007A3137 /* CoreAnimations */,
@@ -211,6 +214,7 @@
 				AC7080781E27582900BBA6FF /* InfoViewController.swift in Sources */,
 				AC297CF21E27F40800504528 /* Interactor.swift in Sources */,
 				AC1E27311E26DCBB00CE5455 /* PulsingAnimation.swift in Sources */,
+				AC2C03461E29815D0045D63C /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

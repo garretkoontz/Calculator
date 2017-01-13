@@ -24,14 +24,11 @@ class TipViewController: UIViewController {
     
     @IBOutlet var tapGesture: UITapGestureRecognizer!
     
-    
     @IBOutlet weak var calculateButton: UIButton!
     
     @IBOutlet weak var clearButton: UIButton!
     
     @IBOutlet weak var gratuitityLabel: UILabel!
-    
-    @IBOutlet weak var randomColorButton: UIButton!
     
     var moneySound = Bundle.main.url(forResource: "moneysound", withExtension: "mp3")!
     var moneyPlayer = AVAudioPlayer()
@@ -69,15 +66,7 @@ class TipViewController: UIViewController {
     @IBAction func calculateButtonTapped(_ sender: Any) {
         
         addPulseToCalculateButton()
-        
-        let button = sender as! UIButton
-        let bounds = button.bounds
-        
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 6, options: .curveEaseInOut, animations: {
-            button.bounds = CGRect(x: bounds.origin.x, y: bounds.origin.y - 20, width: bounds.size.width, height: bounds.size.height)
-        }) { (success: Bool) in
-            button.bounds = bounds
-        }
+        playSound()
         
         var tipPercentage: Double {
             
@@ -106,6 +95,15 @@ class TipViewController: UIViewController {
             }
         }
         
+        let button = sender as! UIButton
+        let bounds = button.bounds
+        
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 6, options: .curveEaseInOut, animations: {
+            button.bounds = CGRect(x: bounds.origin.x, y: bounds.origin.y - 20, width: bounds.size.width, height: bounds.size.height)
+        }) { (success: Bool) in
+            button.bounds = bounds
+        }
+        
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseIn, animations: {
             self.tipAmountLabel.alpha = 1
         }, completion: nil)
@@ -113,10 +111,6 @@ class TipViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseIn, animations: {
             self.totalBillAmountLabel.alpha = 1
         }, completion: nil)
-        
-        
-        
-        playSound()
     }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
@@ -154,7 +148,7 @@ class TipViewController: UIViewController {
         
         let pulse = PulsingAnimation(numberOfPulses: 1, radius: 80, position: clearButton.center)
         pulse.animationDuration = 0.5
-        pulse.backgroundColor = getRandomColor().cgColor
+        pulse.backgroundColor = HelperFunction.getRandomColor().cgColor
         
         self.view.layer.insertSublayer(pulse, below: clearButton.layer)
         
@@ -164,7 +158,7 @@ class TipViewController: UIViewController {
         
         let labelPulse = PulsingAnimation(numberOfPulses: 1, radius: 200, position: gratuitityLabel.center)
         labelPulse.animationDuration = 0.5
-        labelPulse.backgroundColor = getRandomColor().cgColor
+        labelPulse.backgroundColor = HelperFunction.getRandomColor().cgColor
         
         self.view.layer.insertSublayer(labelPulse, below: gratuitityLabel.layer)
         
@@ -174,20 +168,8 @@ class TipViewController: UIViewController {
         
         let buttonPulse = PulsingAnimation(numberOfPulses: 1, radius: 100, position: calculateButton.center)
         buttonPulse.animationDuration = 0.5
-        buttonPulse.backgroundColor = getRandomColor().cgColor
+        buttonPulse.backgroundColor = HelperFunction.getRandomColor().cgColor
         
         self.view.layer.insertSublayer(buttonPulse, below: calculateButton.layer)
     }
-    
-    // This function will generate a random color that will be used for every pulse.
-    
-    func getRandomColor() -> UIColor {
-        
-        let randomRed:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
-        let randomGreen:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
-        let randomBlue:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
-        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-    }
-    
-    
 }
