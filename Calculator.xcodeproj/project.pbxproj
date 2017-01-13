@@ -83,12 +83,12 @@
 			children = (
 				AC18C8BC1E2416EF00A43458 /* AppDelegate.swift */,
 				AC18C8C01E2416EF00A43458 /* Main.storyboard */,
-				AC2C03451E29815D0045D63C /* Helper.swift */,
 				AC28FB0E1E26F882007A3137 /* View Controllers */,
-				AC28FB101E26F8C5007A3137 /* Resources */,
+				AC2C03471E29879E0045D63C /* Helpers */,
 				AC28FB0F1E26F89A007A3137 /* CoreAnimations */,
 				AC0FFFF31E242FC3006B795D /* Custom Fonts */,
 				ACD0C48A1E258D9C0016D177 /* Sounds */,
+				AC28FB101E26F8C5007A3137 /* Resources */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -121,6 +121,14 @@
 				AC18C8C81E2416EF00A43458 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		AC2C03471E29879E0045D63C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C03451E29815D0045D63C /* Helper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		ACD0C48A1E258D9C0016D177 /* Sounds */ = {
